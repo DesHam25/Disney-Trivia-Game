@@ -1,0 +1,207 @@
+
+#container {
+  height: 50rem;
+  width: 90rem;
+  background-image: url(../img/img/DisneyBG.jpg);
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  position: relative;
+  border: .5rem solid var(--primary-color);
+}
+
+#quiz{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#start {
+  font-size: 1.5em;
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: .5rem solid var(--primary-color);
+  box-shadow: 0px 10px 13px -7px #1a1a1a, 5px 5px 15px 5px rgba(0,0,0,0);
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  color:#fff;
+  transition: all .3s ease-in;
+}
+
+#start:hover {
+  border: 3px solid greenyellow;
+  color: greenyellow;
+}
+
+#qImg {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  border-radius: .5rem;
+}
+
+
+#qImg img { 
+  width: 21rem;
+  height: 28rem;
+  box-shadow: 0px 3px 3px 3px;
+  border-radius: .5rem;
+}
+
+#question {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 70%;
+}
+#question p {
+  position: absolute;
+  right: 1%;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+#choices {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  padding: 10px;
+  margin: 0px;
+  font-size: 1em;
+}
+.choice {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid rgb(189, 5, 5);
+  border-radius: 5px;
+  cursor: pointer;
+  padding:.5rem 1rem ;
+  margin-left: 1rem;
+  background-color: var(--primary-color);
+ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+ color: var(--secondary-color);
+}
+.choice:first-child{
+  margin-left: 0;
+}
+
+.choice:hover {
+  border: 2px solid greenyellow;
+  font-weight: bold;
+}
+
+#timer {
+  position: absolute;
+  height: 10rem;
+  width: 20rem;
+  left: 2rem;
+  bottom: 5%;
+  text-align: center;
+  color: rgb(189, 5, 5);
+}
+#counter {
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin:0 auto;
+}
+#btimeGauge {
+  width: 15rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: greenyellow;
+  margin-left: 25px;
+}
+#timeGauge {
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(189, 5, 5);
+  margin-top: -10px;
+  margin-left: 25px;
+}
+#progress {
+  width: 50rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+.prog {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--primary-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 .5rem  ;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+#scoreContainer {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+#scoreContainer img {
+  position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+}
+#scoreContainer p {
+  position: absolute;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px){
+  #container{
+    height: inherit;
+  }
+
+  #qImg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #question{
+    top: 40%;
+    width: 100%;
+  }
+
+  #choices{
+    top: 60%;
+    left: 10%;
+    
+  }
+  #timer{
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
+
+  
+#progress{
+  left: 30%;
+   transform: translateX(-50%);
+}
+}

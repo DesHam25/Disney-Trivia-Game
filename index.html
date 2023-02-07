@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Disney Triva Game</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/img/Evernote-Book.ico"
+    />
+    <script
+      src="https://kit.fontawesome.com/45d19828c5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <span class="bg-cricle bg-cricle--1"></span>
+      <span class="bg-cricle bg-cricle--2"></span>
+      <span class="bg-cricle bg-cricle--3"></span>
+      <span class="bg-cricle bg-cricle--4"></span>
+      <span class="bg-cricle bg-cricle--5"></span>
+      <span class="bg-cricle bg-cricle--6"></span>
+      <span class="bg-cricle bg-cricle--7"></span>
+      <span class="bg-cricle bg-cricle--8"></span>
+      <!-- ================ HEADER-SECTION =============== -->
+      <header class="header">
+        <div class="profile">
+          <a href="https://desham25.github.io/" class="resume btn">
+            <i class="fa-solid fa-download"></i>
+            <span class="tooltip tooltip-bottom">Portfolio</span>
+          </a>
+          <figure class="profile__headshot">
+            <img
+              src="assets/img/Desmond.jpg"
+              alt=""
+              class="profile__headshot--photo"
+            />
+          </figure>
+          <div class="profile--header">
+            <h1 class="header-main">Desmond<span>Hamilton</span></h1>
+            <h2 class="header-sub">
+              Full-Stack Developer <br />UX / UI Disigner
+            </h2>
+            <p class="rundown">
+              Click the start Button. Three choices only (1) is
+              correct. The Progress tells how many questions are
+              Correct (Green) & Wrong (Red) and how many question
+              there are Shows the score percent after the quiz is
+              taken with Gif base on the score Every question have
+              10sec to answer if the question is not answered in the
+              time we move to the next question (automatically) and
+              then restart the counter
+            </p>
+          </div>
+          <div class="link-contents">
+            <a
+              href="https://www.facebook.com/desmond.hamilton.9/"
+              class="profile--social-icon btn"
+            >
+              <i class="fab fa fa-facebook link-icon"></i>
+              <span class="tooltip tooltip-top">Facebook</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dlh25"
+              class="profile--social-icon btn"
+            >
+              <i class="fa fa-linkedin link-icon"></i>
+              <span class="tooltip tooltip-top">Linkdedin</span>
+            </a>
+            <a
+              href="https://github.com/DesHam25"
+              class="profile--social-icon btn"
+            >
+              <i class="fab fa-github link-icon"></i>
+              <span class="tooltip tooltip-top">Github</span>
+            </a>
+            <a
+              href="mailto:deshamilton25@outlook.com?cc=deshamilton84@gmail.com&subject=Career opportunity"
+              class="profile--social-icon btn"
+            >
+              <i class="far fa-envelope link-icon"></i>
+              <span class="tooltip tooltip-top">Email</span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- ================ HEADER-SECTION =============== -->
+
+      <!-- ================ MAIN-SECTION =============== -->
+      <main class="main">
+        <nav class="content__nav">
+          <div class="profile">
+            <a href="#" class="resume btn">
+              <i class="fa-solid fa-download"></i>
+              <span class="tooltip tooltip-bottom">Resume</span>
+            </a>
+            <figure class="profile__headshot">
+              <img
+                src="assets/img/Desmond.jpg"
+                alt=""
+                class="profile__headshot--photo"
+              />
+            </figure>
+            <div class="profile--header">
+              <h1 class="header-main">
+                Desmond<span>Hamilton</span>
+              </h1>
+              <h2 class="header-sub">
+                Full-Stack Developer <br />UX / UI Disigner
+              </h2>
+              <p class="rundown">
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Voluptas magni amet sint aspernatur quo, a
+                tenetur quia! Voluptatum minima inventore, tempore
+                numquam, natus quidem suscipit corrupti ipsa,
+                repellendus doloribus vel.
+              </p>
+            </div>
+            <div class="link-contents">
+              <a href="" class="profile--social-icon btn">
+                <i class="fab fa fa-facebook link-icon"></i>
+                <span class="tooltip tooltip-top">Facebook</span>
+              </a>
+              <a href="#" class="profile--social-icon btn">
+                <i class="fa fa-linkedin link-icon"></i>
+                <span class="tooltip tooltip-top">Linkdedin</span>
+              </a>
+              <a href="#" class="profile--social-icon btn">
+                <i class="fab fa-github link-icon"></i>
+                <span class="tooltip tooltip-top">Github</span>
+              </a>
+              <a href="#" class="profile--social-icon btn">
+                <i class="far fa-envelope link-icon"></i>
+                <span class="tooltip tooltip-top">Email</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav--toggler"><span></span></div>
+        <section>
+          <div id="container">
+            <div id="start">Start Quiz</div>
+
+            <!-- setting the display property to none, the "start" quiz button only needs to be at the beginning of the quiz  -->
+            <div id="quiz" style="display: none">
+              <!-- Inside the page we are displaying Questions, Image,Counter,btimeGauge,timeGauge -->
+              <!-- Img is to for each question being ask -->
+              <div id="qImg"></div>
+              <div id="question"></div>
+
+              <!-- Each question has three choice only (1) is correct the other (2) are wrongAnwswer  -->
+              <div id="choices">
+                <div
+                  class="choice"
+                  id="A"
+                  onclick="checkAnswer('A')"
+                ></div>
+                <div
+                  class="choice"
+                  id="B"
+                  onclick="checkAnswer('B')"
+                ></div>
+                <div
+                  class="choice"
+                  id="C"
+                  onclick="checkAnswer('C')"
+                ></div>
+              </div>
+              <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+              </div>
+              <!-- The Progress tells how many questions are Correct (Greeb) & Wrong (Red) and who many question there are-->
+              <div id="progress"></div>
+            </div>
+            <!-- Shows the score percent after the quiz is taken with Gif base on the score -->
+            <div id="scoreContainer" style="display: none"></div>
+          </div>
+        </section>
+      </main>
+      <!-- ================ MAIN-SECTION =============== -->
+
+      <!-- ================ DARK-MODE =============== -->
+      <figure class="mode">
+        <img src="assets/img/moon.png" alt="moon" id="moon" />
+      </figure>
+    </div>
+    <!-- ================ DARK-MODE =============== -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
